@@ -7,7 +7,7 @@ const WeatherDisplay = ({ isLoading, isError, data }) => {
     return <ProgressInfinite size="large" />
   }
   if (isError) {
-    return <AlertIcon size="large" style="primary" type="error" />
+    return <AlertIcon size="large" type="error" />
   }
   if (data) {
     return (
