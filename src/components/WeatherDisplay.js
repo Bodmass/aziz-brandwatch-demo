@@ -15,7 +15,7 @@ const WeatherDisplay = ({ isLoading, isError, data }) => {
         {data.weather.map(w => (
           <div className="weatherContainer">
             <div className="weatherTemp">
-              <img src={`http://openweathermap.org/img/wn/${w.icon}.png`} />
+              <img src={`http://openweathermap.org/img/wn/${w.icon}.png`} alt={w.description} />
               <span>{Math.round(data.main.temp)}°C</span>
             </div>
             <span>
