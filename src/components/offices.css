@@ -1,0 +1,62 @@
+.officeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 400px) {
+  .officeContainer {
+    display: block;
+  }
+}
+
+.officeCard {
+  margin: 1rem;
+  width: 400px;
+  min-width: 400px;
+  font-size: 1rem;
+}
+
+.locationName {
+  display: flex;
+  font-size: 1.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.brandwatch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  padding: 0 1rem 1rem 1rem;
+  user-select: none;
+}
+
+.brandwatchOffice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  padding: 2rem 0 0 1rem;
+  user-select: none;
+}
+
+.flagIcon {
+  padding-left: 0.5rem;
+}
+
+.bwIcon {
+  padding-right: 0.5rem;
+}
+
+.address {
+  width: 50%;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
