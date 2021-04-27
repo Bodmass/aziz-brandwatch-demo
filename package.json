@@ -1,8 +1,9 @@
 {
-  "name": "create-react-app",
+  "name": "aziz-brandwatch-demo",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@brandwatch/axiom-components": "^13.7.0",
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
     "react-scripts": "2.1.1"
