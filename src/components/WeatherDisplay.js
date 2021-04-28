@@ -1,5 +1,5 @@
 import React from 'react'
-import { ProgressInfinite, AlertIcon } from '@brandwatch/axiom-components'
+import { ProgressInfinite, AlertIcon, Icon } from '@brandwatch/axiom-components'
 import './weather.css'
 
 const WeatherDisplay = ({ isLoading, isError, data }) => {
@@ -23,9 +23,14 @@ const WeatherDisplay = ({ isLoading, isError, data }) => {
             </span>
 
             <div className="weatherExtra">
-              <span>{data.wind.speed}</span>
+              <div className="flexRow">
+                <div style={{ transform: `rotate(${data.wind.deg}deg)` }}>
+                  <Icon name="arrow-down" size="1rem" />
+                </div>
+                <span>{data.wind.speed}</span>
+              </div>
               <span>Humidity: {data.main.humidity}%</span>
-              <span>{data.main.pressure}hPa</span>
+              <span>Pressure: {data.main.pressure}hPa</span>
               <span>Visibility: {(data.visibility / 1000).toFixed(2)}km</span>
             </div>
           </div>
