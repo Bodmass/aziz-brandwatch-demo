@@ -13,3 +13,11 @@
 .themeToggle {
   margin: 0 1rem 0 0;
 }
+
+.moonIcon .ax-icon--moon {
+  color: var(--color-product-moon-lagoon);
+}
+
+.sunIcon .ax-icon--sun {
+  color: var(--color-product-sun-maker);
+}
