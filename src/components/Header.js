@@ -16,9 +16,13 @@ const Header = () => {
           }}
         >
           {darkMode ? (
-            <Icon name="moon" color="moon-lagoon" size="2rem" />
+            <div className="moonIcon">
+              <Icon name="moon" size="2rem" />
+            </div>
           ) : (
-            <Icon name="sun" color="sun-maker" size="2rem" />
+            <div className="sunIcon">
+              <Icon name="sun" size="2rem" />
+            </div>
           )}
         </Toggle>
       </div>

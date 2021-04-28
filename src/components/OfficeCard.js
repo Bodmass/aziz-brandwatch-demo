@@ -4,6 +4,7 @@ import { doFetch } from '../apiHelper'
 import WeatherDisplay from './WeatherDisplay'
 
 const OfficeCard = ({ name, flag, tel, address, url }) => {
+  const [isFlipped, setisFlipped] = useState(0)
   const [cardData, setCardData] = useState()
   const [isLoading, setIsLoading] = useState(false)
   const [isError, setIsError] = useState(false)
@@ -33,23 +34,35 @@ const OfficeCard = ({ name, flag, tel, address, url }) => {
   }, [url])
   return (
     <div className="officeCard">
-      <div>
-        <Card active border borderRadius="small" shade="shade-1" shadow hover onClick={() => {}} size="large">
-          <CardContent className={'cardContent'} size="large" style={{ height: '30rem' }}>
-            <div className="locationName">
-              {name}
-              <div className="flagIcon">
-                <Flag alpha2={flag} size="18px" />
-              </div>
+      <Card
+        active
+        border
+        borderRadius="small"
+        shade="shade-1"
+        shadow
+        hover
+        onClick={() => {
+          isFlipped === 0 ? setisFlipped(360) : setisFlipped(0)
+        }}
+        size="large"
+        style={{
+          transform: `rotateY(${isFlipped}deg)`
+        }}
+      >
+        <CardContent className="cardContent" size="large">
+          <div className="locationName">
+            {name}
+            <div className="flagIcon">
+              <Flag alpha2={flag} size="18px" />
             </div>
-            <WeatherDisplay isError={isError} isLoading={isLoading} data={cardData} />
-            <div>
-              <div className="address">{address}</div>
-              <a href={'tel:' + tel}>{tel}</a>
-            </div>
-          </CardContent>
-        </Card>
-      </div>
+          </div>
+          <WeatherDisplay isError={isError} isLoading={isLoading} data={cardData} />
+          <div>
+            <div className="address">{address}</div>
+            <a href={'tel:' + tel}>{tel}</a>
+          </div>
+        </CardContent>
+      </Card>
     </div>
   )
 }

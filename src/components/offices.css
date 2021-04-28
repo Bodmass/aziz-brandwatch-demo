@@ -16,6 +16,12 @@
   width: 400px;
   min-width: 400px;
   font-size: 1rem;
+  perspective: 1000px;
+}
+
+.officeCard .ax-card {
+  transition: transform 2s;
+  transform-style: preserve-3d;
 }
 
 .locationName {
@@ -59,4 +65,5 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 30rem;
 }
